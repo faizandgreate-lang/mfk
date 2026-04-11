@@ -21,9 +21,12 @@ export interface NavbarProps {
   routes: NavbarRoutes;
 }
 
+import { useRouter } from "next/router";
+
 export default function Navbar(props: NavbarProps) {
   const pathName = usePathname();
-
+  const router = useRouter();
+  
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleModal = () => {
@@ -38,7 +41,7 @@ export default function Navbar(props: NavbarProps) {
           className="drop-shadow-teralight flex items-center justify-center"
           aria-label="Return to home page"
         >
-          <div className="relative h-12 w-12 sm:h-14 sm:w-14">
+          <div className="relative h-20 w-20 sm:h-24 sm:w-24">
             <AnimatedLogo />
           </div>
         </Link>
@@ -80,6 +83,15 @@ export default function Navbar(props: NavbarProps) {
               );
             })}
           </ul>
+          <button
+            onClick={() => {
+              const newLocale = router.locale === "en" ? "ar" : "en";
+              router.push(pathName, pathName, { locale: newLocale });
+            }}
+            className="flex h-10 w-10 items-center justify-center rounded-full font-bold text-foreground hover:bg-accent/10"
+          >
+            {router.locale === "en" ? "ع" : "EN"}
+          </button>
           <ThemeSwitch />
         </nav>
         <AnimatePresence>

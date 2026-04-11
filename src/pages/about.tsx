@@ -6,22 +6,30 @@ import { EXPERIENCE } from "@/data/experience";
 import { EDUCATION } from "@/data/education";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 
+import { useRouter } from "next/router";
+import { Locale, translations } from "@/utility/translations";
+
 export default function About() {
+  const router = useRouter();
+  const locale = (router.locale || "en") as Locale;
+  const tExp = translations[locale].experience;
+  const tEdu = translations[locale].education;
+
   return (
     <>
       <NextSeo
-        title="About Amit Chauhan | Software Developer"
-        description="Learn more about Amit Chauhan, a dedicated Software Developer with 2 years of experience. Discover the journey, skills, and passion that drive me to create innovative and user-friendly web solutions."
+        title="About Mohd Faizan Khan | Operations Coordinator"
+        description="Learn more about Mohd Faizan Khan, a dedicated Operations Coordinator with 6 years of experience. Discover the journey, skills, and passion that drive me to optimize organizational efficiency."
         canonical={`${siteMetadata.siteUrl}/about`}
         openGraph={{
           url: `${siteMetadata.siteUrl}/about`,
-          title: "Learn About Amit Chauhan - Software Developer",
+          title: "Learn About Mohd Faizan Khan - Operations Coordinator",
           description:
-            "Dive into the story of Amit Chauhan, a Software Developer. Uncover the experiences, skills, and passion that fuel a commitment to delivering exceptional web solutions.",
+            "Dive into the story of Mohd Faizan Khan, an Operations Coordinator. Uncover the experiences, skills, and passion that fuel a commitment to delivering exceptional operational workflows.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
-              alt: "Amit Chauhan - Portfolio Image",
+              alt: "Mohd Faizan Khan - Portfolio Image",
             },
           ],
           siteName: siteMetadata.siteName,
@@ -39,8 +47,8 @@ export default function About() {
         ]}
       />
       <AboutHero />
-      <ExperienceShowcaseList title="Experience" details={EXPERIENCE} />
-      <ExperienceShowcaseList title="Education" details={EDUCATION} />
+      <ExperienceShowcaseList title={tExp.title} details={EXPERIENCE[locale]} />
+      <ExperienceShowcaseList title={tEdu.title} details={EDUCATION[locale]} />
     </>
   );
 }

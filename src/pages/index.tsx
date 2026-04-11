@@ -4,27 +4,32 @@ import { NextSeo } from "next-seo";
 
 import LandingHero from "@/components/landing-hero";
 import SkillsShowcase from "@/components/skills/skills-showcase";
-import ProjectShowcase from "@/components/projects/project-showcase";
-import { PROJECT_SHOWCASE } from "@/data/projects";
+import HomeHighlights from "@/components/home-highlights";
 import { SKILLS_DATA } from "@/data/skills";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 
+import { useRouter } from "next/router";
+import { Locale } from "@/utility/translations";
+
 export default function Home() {
+  const router = useRouter();
+  const locale = (router.locale || "en") as Locale;
+
   return (
     <>
       <NextSeo
-        title="Amit Chauhan | Software Developer"
-        description="Explore the professional portfolio of Amit Chauhan, a skilled Software Developer with 2 years of hands-on experience. Discover innovative projects, expertise in modern web technologies, and a passion for creating seamless user experiences."
+        title="Mohd Faizan Khan | Operations Coordinator"
+        description="Explore the professional portfolio of Mohd Faizan Khan, a skilled Operations Coordinator with 6 years of hands-on experience. Discover expertise in workforce management, operational efficiency, and a passion for creating seamless organizational operations."
         canonical={siteMetadata.siteUrl}
         openGraph={{
           url: siteMetadata.siteUrl,
-          title: "Amit Chauhan - Software Developer",
+          title: "Mohd Faizan Khan - Operations Coordinator",
           description:
-            "Dive into the world of web development with Amit Chauhan. Discover a Software Developer with 2 years of expertise, showcasing cutting-edge projects and a commitment to crafting exceptional user interfaces.",
+            "Dive into the world of operations management with Mohd Faizan Khan. Discover an Operations Coordinator with 6 years of expertise, showcasing leadership and a commitment to operational efficiency.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
-              alt: "Amit Chauhan - Portfolio Image",
+              alt: "Mohd Faizan Khan - Portfolio Image",
             },
           ],
           siteName: siteMetadata.siteName,
@@ -50,8 +55,8 @@ export default function Home() {
         )}
       </Head>
       <LandingHero />
-      <SkillsShowcase skills={SKILLS_DATA} />
-      <ProjectShowcase projects={PROJECT_SHOWCASE} />
+      <SkillsShowcase skills={SKILLS_DATA[locale]} />
+      <HomeHighlights />
     </>
   );
 }

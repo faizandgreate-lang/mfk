@@ -56,9 +56,21 @@ export default function MobileMenu({
                     {link.title}
                   </button>
                 ))}
-                <ThemeSwitch setClose={setOpenMenu} />
+                <div className="flex gap-4">
+                  <button
+                    onClick={() => {
+                      const newLocale = router.locale === "en" ? "ar" : "en";
+                      router.push(pathName, pathName, { locale: newLocale });
+                      setOpenMenu(false);
+                    }}
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-accent text-accent hover:bg-accent/10"
+                  >
+                    {router.locale === "en" ? "ع" : "EN"}
+                  </button>
+                  <ThemeSwitch setClose={setOpenMenu} />
+                </div>
               </div>
-              <div className="absolute bottom-0 py-6">©2023 Amit Chauhan</div>
+              <div className="absolute bottom-0 py-6">©2024 Mohd Faizan Khan</div>
             </Dialog.Panel>
           </Transition.Child>
         </div>
