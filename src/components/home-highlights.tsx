@@ -25,18 +25,26 @@ const HIGHLIGHTS_DATA = {
     ],
     websites: [
       {
-        name: "Instant CV Generator for Company",
-        url: "https://linux-aios.github.io/care-pro-cv-generator-by-faizan/",
+        name: "Hijri to Gregorian Converter",
+        url: "https://calender.linux-aios.com/",
       },
       {
-        name: "Live Free-Pool Update",
-        url: "https://faizandgreate-lang.github.io/Free-pool/",
+        name: "Job Applying Website",
+        url: "https://job.linux-aios.com/",
       },
       {
-        name: "Where Am I (Address & Pincode Finder)",
-        url: "https://where.am.i.linux-aios.com",
+        name: "Job Report System",
+        url: "http://jobreport.linux-aios.com/",
       },
-    ]
+      {
+        name: "AI CV Maker",
+        url: "https://cv.linux-aios.com",
+      },
+      {
+        name: "Faizan AI Chat Bot",
+        url: "https://faizanai.linux-aios.com",
+      },
+    ],
   },
   ar: {
     coreCompetencies: [
@@ -58,19 +66,27 @@ const HIGHLIGHTS_DATA = {
     ],
     websites: [
       {
-        name: "مولد السير الذاتية الفوري للشركات",
-        url: "https://linux-aios.github.io/care-pro-cv-generator-by-faizan/",
+        name: "محول التاريخ الهجري إلى ميلادي",
+        url: "https://calender.linux-aios.com/",
       },
       {
-        name: "تحديث Free-Pool المباشر",
-        url: "https://faizandgreate-lang.github.io/Free-pool/",
+        name: "موقع التقديم على الوظائف",
+        url: "https://job.linux-aios.com/",
       },
       {
-        name: "أين أنا (مكتشف العناوين والرموز البريدية)",
-        url: "https://where.am.i.linux-aios.com",
+        name: "نظام تقارير الوظائف",
+        url: "http://jobreport.linux-aios.com/",
       },
-    ]
-  }
+      {
+        name: "صانع السير الذاتية بالذكاء الاصطناعي",
+        url: "https://cv.linux-aios.com",
+      },
+      {
+        name: "فيضان AI بوت الدردشة",
+        url: "https://faizanai.linux-aios.com",
+      },
+    ],
+  },
 };
 
 export default function HomeHighlights() {
@@ -97,7 +113,9 @@ export default function HomeHighlights() {
                 className="flex items-start gap-2 rounded-lg border border-accent/20 bg-background p-3 shadow-sm dark:bg-zinc-800/80"
               >
                 <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-accent" />
-                <span className="text-sm font-medium text-foreground">{comp}</span>
+                <span className="text-sm font-medium text-foreground">
+                  {comp}
+                </span>
               </li>
             ))}
           </ul>
@@ -134,23 +152,23 @@ export default function HomeHighlights() {
             {t.websitesAndProjects}
           </h2>
         </div>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {data.websites.map((site, idx) => (
             <a
               key={idx}
               href={site.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col justify-between rounded-xl border border-accent/20 bg-background p-6 shadow-md transition-all hover:-translate-y-1 hover:shadow-lg dark:bg-zinc-800"
+              className="group flex flex-col justify-between rounded-lg border border-accent/20 bg-background p-4 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md dark:bg-zinc-800"
             >
               <div>
-                <h3 className="text-lg font-bold text-foreground group-hover:text-accent">
+                <h3 className="text-sm font-bold text-foreground group-hover:text-accent">
                   {site.name}
                 </h3>
               </div>
-              <div className="mx-auto mt-6 max-w-max text-accent flex items-center gap-2 font-semibold">
+              <div className="mt-4 flex items-center gap-2 text-xs font-semibold text-accent">
                 <span>{t.visitSite}</span>
-                <FiExternalLink className="h-4 w-4" />
+                <FiExternalLink className="h-3 w-3" />
               </div>
             </a>
           ))}

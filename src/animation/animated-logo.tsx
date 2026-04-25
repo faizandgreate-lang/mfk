@@ -12,9 +12,9 @@ export default function AnimatedLogo() {
       >
         <Image
           src="/images/logo.png"
-          alt="Mohd Faizan Khan Logo"
+          alt="Mohammad Faizan Khan Logo"
           fill
-          className="object-contain scale-[1.8] transition-transform duration-300"
+          className="scale-[1.8] object-contain transition-transform duration-300"
           unoptimized
         />
       </motion.div>

@@ -26,7 +26,7 @@ export default function ProjectCard(props: ProjectCardProps) {
       }}
       className="w-full overflow-hidden rounded-lg border border-accent/20 bg-background shadow-md transition-shadow duration-150 hover:shadow-md hover:shadow-accent/20 dark:bg-zinc-800 dark:hover:shadow-lg"
     >
-      <div className="p-4 sm:p-6 pb-0">
+      <div className="p-4 pb-0 sm:p-6">
         <Corosel images={props.imageUrl} aspectRatio={2.5} />
       </div>
       <div className="p-3 text-foreground sm:p-4">

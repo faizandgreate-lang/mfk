@@ -16,18 +16,18 @@ export default function Projects() {
   return (
     <>
       <NextSeo
-        title="Projects by Amit Chauhan - Software Developer Portfolio"
-        description="Explore a collection of projects by Amit Chauhan, a seasoned Software Developer. From innovative web applications to responsive interfaces, discover the depth and diversity of my work."
+        title="Projects - Mohammad Faizan Khan - Project manager Portfolio"
+        description="Explore a collection of projects by Mohammad Faizan Khan, a seasoned Project manager. From innovative web applications to responsive interfaces, discover the depth and diversity of my work."
         canonical={`${siteMetadata.siteUrl}/projects`}
         openGraph={{
           url: `${siteMetadata.siteUrl}/projects`,
-          title: "Discover Projects by Amit Chauhan - Software Developer",
+          title: "Discover Projects by Mohammad Faizan Khan - Project manager",
           description:
-            "Explore a showcase of projects crafted by Amit Chauhan, a Software Developer. Witness the fusion of creativity and technology in web development.",
+            "Explore a showcase of projects crafted by Mohammad Faizan Khan, a Project manager. Witness the fusion of creativity and technology in operations and project management.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
-              alt: "Amit Chauhan - Portfolio Image",
+              alt: "Mohammad Faizan Khan - Portfolio Image",
             },
           ],
           siteName: siteMetadata.siteName,
@@ -40,7 +40,7 @@ export default function Projects() {
           {
             property: "keywords",
             content:
-              "Projects,Amit Portfolio, Software Developer, React Developer, Frontend Developer, Web Development, JavaScript, HTML, CSS, UI/UX, Web Applications, Responsive Design",
+              "Projects, Mohammad Faizan Khan Portfolio, Project Manager, Operation Coordinator, Operations, Management",
           },
         ]}
       />
@@ -50,9 +50,7 @@ export default function Projects() {
             {t.title}
           </h1>
           <div className="my-2">
-            <span className="text-sm text-muted-foreground">
-              {t.subtitle}
-            </span>
+            <span className="text-sm text-muted-foreground">{t.subtitle}</span>
           </div>
           <div className="mt-8 grid grid-cols-1 gap-x-6 gap-y-10 lg:grid-cols-2">
             {PROJECTS_CARD[locale].map((card, index) => (

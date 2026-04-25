@@ -46,6 +46,7 @@ export interface ExperienceShowcaseListItemProps {
   date: string;
   location: string;
   description: string;
+  logo?: string;
 }
 
 export default function ExperienceShowcaseListItem(
@@ -63,21 +64,34 @@ export default function ExperienceShowcaseListItem(
           duration: 0.4,
         }}
       >
-        <h3 className="text-base font-bold text-foreground sm:text-xl md:text-2xl">
-          {props.title}{" "}
-          <Link
-            href={props.organisation.href}
-            className="cursor-pointer text-accent"
-            target="_blank"
-            rel="nofollow"
-          >
-            @{props.organisation.name}
-          </Link>
-        </h3>
-        <span className="text-sm font-medium text-foreground xs:text-base">
-          {props.date} | {props.location}
-        </span>
-        <p className="text-sm font-medium text-muted-foreground xs:text-base">
+        <div className="flex items-center gap-4">
+          {props.logo && (
+            <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-md border border-accent/20 bg-background">
+              <img
+                src={props.logo}
+                alt={`${props.organisation.name} logo`}
+                className="h-full w-full object-contain"
+              />
+            </div>
+          )}
+          <div className="flex flex-col">
+            <h3 className="text-base font-bold text-foreground sm:text-xl md:text-2xl">
+              {props.title}{" "}
+              <Link
+                href={props.organisation.href}
+                className="cursor-pointer text-accent"
+                target="_blank"
+                rel="nofollow"
+              >
+                @{props.organisation.name}
+              </Link>
+            </h3>
+            <span className="text-sm font-medium text-foreground xs:text-base">
+              {props.date} | {props.location}
+            </span>
+          </div>
+        </div>
+        <p className="mt-2 whitespace-pre-line text-sm font-medium text-muted-foreground xs:text-base">
           {props.description}
         </p>
       </motion.div>

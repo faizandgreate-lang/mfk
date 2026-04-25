@@ -1,9 +1,12 @@
-import { useEffect, useRef, useState } from "react";
-
-import { AnimatePresence, motion } from "framer-motion";
-
+import { useRef } from "react";
+import {
+  AnimatePresence,
+  motion,
+  useScroll,
+  useTransform,
+  useSpring,
+} from "framer-motion";
 import FadeUp from "@/animation/fade-up";
-
 import { useRouter } from "next/router";
 import { translations, Locale } from "@/utility/translations";
 
@@ -11,37 +14,26 @@ export default function LandingHero() {
   const router = useRouter();
   const locale = (router.locale || "en") as Locale;
   const t = translations[locale].hero;
-  
-  const [scrollY, setScrollY] = useState(0);
+
   const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
 
-  let progress = 0;
-  const { current: elContainer } = ref;
-
-  if (elContainer) {
-    progress = Math.min(1, scrollY / elContainer.clientHeight);
-  }
-
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
-  };
-
-  useEffect(() => {
-    document.addEventListener("scroll", handleScroll);
-
-    return () => document.removeEventListener("scroll", handleScroll);
-  }, []);
+  const springConfig = { stiffness: 300, damping: 30, restDelta: 0.001 };
+  const y = useSpring(
+    useTransform(scrollYProgress, [0, 1], ["0%", "20%"]),
+    springConfig,
+  );
 
   return (
     <motion.section
-      animate={{
-        transform: `translateY(${progress * 20}vh)`,
-      }}
-      transition={{ type: "spring", stiffness: 100 }}
+      style={{ y }}
       ref={ref}
       className="pointer-events-none flex max-h-[1000px] min-h-[calc(100vh-200px)] items-center px-6 sm:px-14 md:h-[calc(100vh-200px)] md:min-h-max md:px-20"
     >
-      <div className="w-full pointer-events-auto">
+      <div className="pointer-events-auto w-full">
         <div className="mx-auto max-w-7xl">
           <AnimatePresence>
             <FadeUp key="title-main" duration={0.6}>
@@ -56,14 +48,28 @@ export default function LandingHero() {
               <div className="mt-8 max-w-3xl text-base font-semibold text-zinc-900 dark:text-zinc-200 sm:text-base md:text-xl">
                 {t.summary}
               </div>
-              <div className="mt-8 flex gap-4">
+              <div className="mt-8 flex flex-wrap gap-4">
                 <a
                   href="https://drive.google.com/drive/folders/1pq1KYKi-74dCn60FwlzWkHVbiFuMo5ir?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 rounded-full border-2 border-accent bg-accent px-6 py-3 font-semibold text-background transition-transform hover:scale-105"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" x2="12" y1="15" y2="3" />
+                  </svg>
                   {t.downloadCV}
                 </a>
               </div>

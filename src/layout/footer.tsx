@@ -4,7 +4,7 @@ import { siteMetadata } from "@/data/siteMetaData.mjs";
 
 export default function Footer() {
   return (
-    <footer className="flex w-full flex-col items-center gap-20 bg-transparent px-6 py-8 sm:px-14 md:px-20">
+    <footer className="flex w-full flex-col items-center gap-12 bg-transparent px-6 py-8 sm:px-14 md:px-20">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 rounded-2xl bg-accent p-8 text-background sm:p-12 md:gap-12 lg:p-20">
         <div className="text-center">
           <span className="inline-block rounded-full bg-background px-3 py-1 text-xs font-semibold uppercase text-accent md:text-sm lg:text-base">
@@ -16,16 +16,14 @@ export default function Footer() {
           target="_blank"
           className="mb-6 cursor-pointer text-center text-2xl font-bold underline sm:text-4xl lg:text-6xl"
         >
-          <span>mohammad.faizankhan@</span>
-          <br />
-          <span>icloud.com</span>
+          <span className="break-all">{siteMetadata.email}</span>
         </a>
         <div className="flex justify-center">
           <ContactButton />
         </div>
       </div>
       <div className="flex w-full flex-col items-center justify-between gap-8 text-center  md:flex-row md:justify-between lg:mx-auto lg:max-w-7xl">
-        <span className="text-foreground">©2024 Mohd Faizan Khan</span>
+        <span className="text-foreground">©2014 Mohammad Faizan Khan</span>
         <div className="flex gap-8">
           <a
             href={siteMetadata.github}

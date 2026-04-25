@@ -1,8 +1,8 @@
 export const siteMetadata = {
-  title: "Mohd Faizan Khan portfolio",
-  author: "Mohd Faizan Khan",
-  headerTitle: "Mohd Faizan Khan",
-  description: "Operations Coordinator @ CARE-PRO | Optimizing Operational Efficiency",
+  title: "Mohammad Faizan Khan portfolio",
+  author: "Mohammad Faizan Khan",
+  headerTitle: "Mohammad Faizan Khan",
+  description: "Project manager @ CARE-PRO | Optimizing Operational Efficiency",
   language: "en-us",
   theme: "light",
   siteName: "mohammad.faizan.khan.linux-aios.com",

@@ -139,7 +139,7 @@ export default function ContactForm({
                 <span>Sending</span>
               </div>
             ) : (
-              <span>Submit</span>
+              <span>Send Message</span>
             )}
           </button>
         </Form>

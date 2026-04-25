@@ -18,14 +18,14 @@ export default function Home() {
   return (
     <>
       <NextSeo
-        title="Mohd Faizan Khan | Operations Coordinator"
-        description="Explore the professional portfolio of Mohd Faizan Khan, a skilled Operations Coordinator with 6 years of hands-on experience. Discover expertise in workforce management, operational efficiency, and a passion for creating seamless organizational operations."
+        title="Mohammad Faizan Khan | Project manager"
+        description="Explore the professional portfolio of Mohammad Faizan Khan, a skilled Project manager with 6 years of hands-on experience. Discover expertise in workforce management, operational efficiency, and a passion for creating seamless organizational operations."
         canonical={siteMetadata.siteUrl}
         openGraph={{
           url: siteMetadata.siteUrl,
-          title: "Mohd Faizan Khan - Operations Coordinator",
+          title: "Mohammad Faizan Khan - Project manager",
           description:
-            "Dive into the world of operations management with Mohd Faizan Khan. Discover an Operations Coordinator with 6 years of expertise, showcasing leadership and a commitment to operational efficiency.",
+            "Dive into the world of operations management with Mohammad Faizan Khan. Discover a Project manager with 6 years of expertise, showcasing leadership and a commitment to operational efficiency.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
@@ -42,7 +42,7 @@ export default function Home() {
           {
             property: "keywords",
             content:
-              "React Developer, Software Developer, Frontend Developer, Web Developer, JavaScript, HTML, CSS, Portfolio, UI/UX, React.js, Frontend Development, Web Development, JavaScript Developer, Responsive Design",
+              "Operations Coordinator, Project Manager, Operations Management, Workforce Management, Operations, Management, Leadership",
           },
         ]}
       />

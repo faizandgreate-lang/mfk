@@ -27,6 +27,9 @@
     --muted-foreground: 240 5% 64.9%;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
   * {
     @apply border-border;
   }

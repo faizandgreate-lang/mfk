@@ -166,8 +166,12 @@ export function cursorTrail(props: CursorTrail) {
   }
 
   function resizeCanvas() {
-    ctx.canvas.width = window.innerWidth - 20;
-    ctx.canvas.height = window.innerHeight;
+    const dpr = window.devicePixelRatio || 1;
+    ctx.canvas.width = window.innerWidth * dpr;
+    ctx.canvas.height = window.innerHeight * dpr;
+    ctx.scale(dpr, dpr);
+    ctx.canvas.style.width = `${window.innerWidth}px`;
+    ctx.canvas.style.height = `${window.innerHeight}px`;
   }
 
   function stopAnimation() {

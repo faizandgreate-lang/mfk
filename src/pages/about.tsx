@@ -18,18 +18,18 @@ export default function About() {
   return (
     <>
       <NextSeo
-        title="About Mohd Faizan Khan | Operations Coordinator"
-        description="Learn more about Mohd Faizan Khan, a dedicated Operations Coordinator with 6 years of experience. Discover the journey, skills, and passion that drive me to optimize organizational efficiency."
+        title="About Mohammad Faizan Khan | Project manager"
+        description="Learn more about Mohammad Faizan Khan, a dedicated Project manager with 6 years of experience. Discover the journey, skills, and passion that drive me to optimize organizational efficiency."
         canonical={`${siteMetadata.siteUrl}/about`}
         openGraph={{
           url: `${siteMetadata.siteUrl}/about`,
-          title: "Learn About Mohd Faizan Khan - Operations Coordinator",
+          title: "Learn About Mohammad Faizan Khan - Project manager",
           description:
-            "Dive into the story of Mohd Faizan Khan, an Operations Coordinator. Uncover the experiences, skills, and passion that fuel a commitment to delivering exceptional operational workflows.",
+            "Dive into the story of Mohammad Faizan Khan, a Project manager. Uncover the experiences, skills, and passion that fuel a commitment to delivering exceptional operational workflows.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
-              alt: "Mohd Faizan Khan - Portfolio Image",
+              alt: "Mohammad Faizan Khan - Portfolio Image",
             },
           ],
           siteName: siteMetadata.siteName,
@@ -42,7 +42,7 @@ export default function About() {
           {
             property: "keywords",
             content:
-              "Software Developer portfolio, Software Developer, React Developer, Frontend Developer, Web Developer, JavaScript, HTML, CSS, Professional Journey, Skills, Passion for Web Development",
+              "Project Manager portfolio, Operation Coordinator, Operations, Management, Professional Journey, Skills",
           },
         ]}
       />

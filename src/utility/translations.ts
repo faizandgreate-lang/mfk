@@ -10,17 +10,20 @@ export const translations = {
       contact: "Contact",
     },
     hero: {
-      greeting: "Hi, I'm Mohd Faizan Khan",
-      title: "Operations Coordinator",
-      summary: "I manage workforce operations across 40+ projects, optimizing efficiency and compliance across the Makkah Region.",
+      greeting: "Hi, I'm Mohammad Faizan Khan",
+      title: "Project manager",
+      summary:
+        "I manage operations and build systems that allow businesses to scale without friction, specializing in human capital and operational efficiency.",
       location: "Jeddah, Saudi Arabia",
-      downloadCV: "Download CV"
+      downloadCV: "Download CV",
+      alternatePortfolio: "Alternate Portfolio",
     },
     about: {
-      greeting: "Hi, I'm Mohd Faizan Khan",
-      p1: "I specialize in the intersection of human capital and operational efficiency. Whether it's navigating the complexities of Qiwa and Ajeer compliance or designing digital workflows that cut administrative errors by 25%, my goal is always to \"plug the leak\" and optimize the boat.",
-      p2: "I am passionate about project excellence and creating seamless client experiences. Let's connect to discuss how I can bring operational stability to your organization.",
-      aboutTitle: "About"
+      greeting: "Hi, I'm Mohammad Faizan Khan",
+      p1: "I specialize in operations management, workforce operations, and process optimization, focusing on building structured systems that improve efficiency and reduce operational chaos. I have experience across Saudi Arabia in hospitality, healthcare, and corporate environments, managing large teams and ensuring smooth execution of multi-site operations.",
+      p2: "Currently, I work as a Project Manager handling workforce operations and ensuring compliance with Saudi systems such as Qiwa, Ajeer, and GOSI. My approach is to simplify complex processes, improve workflows, and build scalable systems that deliver consistent results.",
+      p3: "To support my operations, I have also built digital tools such as a Hijri to Gregorian Converter, Job Application System for easy CV submissions, Job Report System for tracking workforce activity, AI CV Maker, and an AI Chat Bot to streamline communication and daily operational support.",
+      aboutTitle: "About",
     },
     skills: {
       title: "My Skills",
@@ -28,18 +31,21 @@ export const translations = {
       certifications: "Certifications",
     },
     experience: {
-      title: "My Experience"
+      title: "My Experience",
     },
     education: {
-      title: "My Education"
+      title: "My Education",
     },
     events: {
       title: "Event Organization",
-      subtitle: "Here are some of the major events I have managed and coordinated manpower for:",
-      footerTitle: "I am continually scaling operations and ensuring seamless event executions.",
-      footerDesc: "Connect with me on LinkedIn to discuss how we can bring operational stability to your next massive event.",
+      subtitle:
+        "Here are some of the major events I have managed and coordinated manpower for:",
+      footerTitle:
+        "I am continually scaling operations and ensuring seamless event executions.",
+      footerDesc:
+        "Connect with me on LinkedIn to discuss how we can bring operational stability to your next massive event.",
       miniArcadeTitle: "Take a Break!",
-      miniArcadeDesc: "Enjoy a quick game while you're here."
+      miniArcadeDesc: "Enjoy a quick game while you're here.",
     },
     highlights: {
       coreCompetencies: "Core Competencies",
@@ -50,8 +56,21 @@ export const translations = {
     contact: {
       title: "Contact",
       header: "Let's innovate together",
-      subTitle: "Connect with me to discuss operations, workforce logistics, or just to say hi!"
-    }
+      subTitle:
+        "Connect with me to discuss operations, workforce logistics, or just to say hi!",
+    },
+    chat: {
+      title: "Faizan AI",
+      subtitle: "Your Intelligent Assistant",
+      placeholder: "Ask me anything...",
+      typing: "Typing...",
+      thinking: "Faizan AI is thinking...",
+      error: "Unable to reach AI. Please try again.",
+      welcome: "Hi! I'm Faizan AI. 👋",
+      welcomeSub: "I can help you with anything, just like ChatGPT.",
+      example:
+        'Try asking: "Write a business proposal" or "Explain Faizan\'s experience."',
+    },
   },
   ar: {
     navbar: {
@@ -65,16 +84,19 @@ export const translations = {
     },
     hero: {
       greeting: "مرحباً، أنا محمد فيضان خان",
-      title: "منسق عمليات",
-      summary: "أدير عمليات القوى العاملة عبر أكثر من ٤٠ مشروعاً، مع تحسين الكفاءة والامتثال في جميع أنحاء منطقة مكة المكرمة.",
+      title: "مدير مشاريع",
+      summary:
+        "أدير العمليات وأبني الأنظمة التي تسمح للشركات بالتوسع دون احتكاك، متخصص في رأس المال البشري والكفاءة التشغيلية.",
       location: "جدة، المملكة العربية السعودية",
-      downloadCV: "تحميل السيرة الذاتية"
+      downloadCV: "تحميل السيرة الذاتية",
+      alternatePortfolio: "المحفظة البديلة",
     },
     about: {
       greeting: "مرحباً، أنا محمد فيضان خان",
-      p1: "أتخصص في التقاطع بين رأس المال البشري والكفاءة التشغيلية. سواء كان الأمر يتعلق بالتعامل مع تعقيدات امتثال قوى وأجير أو تصميم تدفقات عمل رقمية تقلل الأخطاء الإدارية بنسبة ٢٥٪، فإن هدفي دائمًا هو سد الفجوات وتحسين الأداء.",
-      p2: "أنا شغوف بالتميز في المشاريع وخلق تجارب عملاء سلسة. دعونا نتواصل لمناقشة كيف يمكنني جلب الاستقرار التشغيلي لمؤسستك.",
-      aboutTitle: "نبذة عني"
+      p1: "أتخصص في إدارة العمليات، وعمليات القوى العاملة، وتحسين العمليات، مع التركيز على بناء أنظمة منظمة تعمل على تحسين الكفاءة وتقليل الفوضى التشغيلية. لدي خبرة في جميع أنحاء المملكة العربية السعودية في بيئات الضيافة والرعاية الصحية والشركات، حيث أدير فرقاً كبيرة وأضمن التنفيذ السلس للعمليات في مواقع متعددة.",
+      p2: "حالياً، أعمل كمدير مشاريع أتولى عمليات القوى العاملة وأضمن الامتثال للأنظمة السعودية مثل قوى وأجير والتأمينات الاجتماعية (GOSI). نهجي هو تبسيط العمليات المعقدة، وتحسين تدفقات العمل، وبناء أنظمة قابلة للتوسع تحقق نتائج متسقة.",
+      p3: "ولدعم عملياتي، قمت أيضاً ببناء أدوات رقمية مثل محول التاريخ الهجري إلى ميلادي، ونظام تقديم الطلبات للوظائف لتسهيل إرسال السير الذاتية، ونظام تقارير الوظائف لتتبع نشاط القوى العاملة، وصانع السير الذاتية بالذكاء الاصطناعي، وبوت دردشة مدعوم بالذكاء الاصطناعي لتبسيط التواصل ودعم العمليات اليومية.",
+      aboutTitle: "نبذة عني",
     },
     skills: {
       title: "مهاراتي",
@@ -82,18 +104,21 @@ export const translations = {
       certifications: "الشهادات",
     },
     experience: {
-      title: "خبراتي"
+      title: "خبراتي",
     },
     education: {
-      title: "التعليم"
+      title: "التعليم",
     },
     events: {
       title: "تنظيم الفعاليات",
-      subtitle: "إليك بعض الفعاليات الكبرى التي قمت بإدارتها وتنسيق القوى العاملة لها:",
-      footerTitle: "أنا مستمر في توسيع نطاق العمليات وضمان تنفيذ الفعاليات بسلاسة.",
-      footerDesc: "تواصل معي على لينكد إن لمناقشة كيف يمكننا تحقيق الاستقرار التشغيلي لفعاليتك الضخمة القادمة.",
+      subtitle:
+        "إليك بعض الفعاليات الكبرى التي قمت بإدارتها وتنسيق القوى العاملة لها:",
+      footerTitle:
+        "أنا مستمر في توسيع نطاق العمليات وضمان تنفيذ الفعاليات بسلاسة.",
+      footerDesc:
+        "تواصل معي على لينكد إن لمناقشة كيف يمكننا تحقيق الاستقرار التشغيلي لفعاليتك الضخمة القادمة.",
       miniArcadeTitle: "خذ استراحة!",
-      miniArcadeDesc: "استمتع بلعبة سريعة أثناء تواجدك هنا."
+      miniArcadeDesc: "استمتع بلعبة سريعة أثناء تواجدك هنا.",
     },
     highlights: {
       coreCompetencies: "الكفاءات الأساسية",
@@ -104,9 +129,21 @@ export const translations = {
     contact: {
       title: "اتصل بي",
       header: "دعونا نبتكر معاً",
-      subTitle: "تواصل معي لمناقشة العمليات والخدمات اللوجستية للقوى العاملة أو للترحيب فقط!"
-    }
-  }
+      subTitle:
+        "تواصل معي لمناقشة العمليات والخدمات اللوجستية للقوى العاملة أو للترحيب فقط!",
+    },
+    chat: {
+      title: "فيضان AI",
+      subtitle: "مساعدك الذكي",
+      placeholder: "اسألني أي شيء...",
+      typing: "يكتب...",
+      thinking: "فيضان AI يفكر...",
+      error: "تعذر الاتصال بالذكاء الاصطناعي. يرجى المحاولة مرة أخرى.",
+      welcome: "مرحباً! أنا فيضان AI. 👋",
+      welcomeSub: "يمكنني مساعدتك في أي شيء، تماماً مثل ChatGPT.",
+      example: 'جرّب أن تسأل: "اكتب اقتراح عمل" أو "اشرح خبرة فيضان."',
+    },
+  },
 };
 
 export type Locale = "en" | "ar";

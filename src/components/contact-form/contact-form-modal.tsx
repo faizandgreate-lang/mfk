@@ -9,6 +9,8 @@ import ContactForm, {
 import ContactMailToast, {
   type MailSentToastState,
 } from "@/components/contact-form/contact-mail-toast";
+import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { LinkedinIcon } from "@/components/icons";
 
 export interface ContactFormModelProps {
   showModal: boolean;
@@ -106,6 +108,20 @@ export default function ContactFormModal({
                   isSubmitting={isSendingMail}
                   handleSubmit={handleSubmit}
                 />
+                <div className="mt-8 flex flex-col items-center gap-4 border-t border-background/20 pt-8 text-background">
+                  <span className="text-sm font-medium opacity-80">
+                    Prefer social media?
+                  </span>
+                  <a
+                    href={siteMetadata.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 rounded-full border-2 border-background bg-background px-6 py-2 text-sm font-bold text-accent transition-all hover:scale-105 hover:bg-transparent hover:text-background"
+                  >
+                    <LinkedinIcon className="h-5 w-5" />
+                    <span>Connect on LinkedIn</span>
+                  </a>
+                </div>
               </Dialog.Panel>
             </Transition.Child>
           </div>
