@@ -91,11 +91,11 @@ export default function FaizanAIChat({
           });
         }
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error("Chat error:", error);
       setChatHistory((prev) => [
         ...prev,
-        { role: "assistant", content: `❌ **Error:** ${t.error}` },
+        { role: "assistant", content: `❌ **Error:** ${error.message || t.error}` },
       ]);
     } finally {
       setIsLoading(false);
