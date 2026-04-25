@@ -7,7 +7,7 @@ import { EDUCATION } from "@/data/education";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 
 import { useRouter } from "next/router";
-import { Locale, translations } from "../utility/translations";
+import { Locale, translations } from "@/utility/translations";
 
 export default function About() {
   const router = useRouter();

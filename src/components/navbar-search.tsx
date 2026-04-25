@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Search } from "lucide-react";
 import { useRouter } from "next/router";
-import { translations, Locale } from "../../utility/translations";
+import { translations, Locale } from "@/utility/translations";
 
 interface NavbarSearchProps {
   onSearch: (value: string) => void;

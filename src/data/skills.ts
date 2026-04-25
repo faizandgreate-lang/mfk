@@ -12,7 +12,7 @@ import {
 import { SiGoogleanalytics, SiSap } from "react-icons/si";
 import { MdOutlineLeaderboard, MdOutlineManageAccounts } from "react-icons/md";
 
-import { type Locale } from "../utility/translations";
+import { type Locale } from "@/utility/translations";
 
 export const SKILLS_DATA: Record<Locale, SkillsShowcaseProps["skills"]> = {
   en: [

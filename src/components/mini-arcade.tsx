@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
-import { Locale, translations } from "../../utility/translations";
+import { Locale, translations } from "@/utility/translations";
 
 function TicTacToe() {
   const [board, setBoard] = useState(Array(9).fill(null));

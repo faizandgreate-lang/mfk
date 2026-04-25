@@ -3,7 +3,7 @@ import { useState } from "react";
 import { AnimatePresence, AnimationProps, motion, wrap } from "framer-motion";
 import { BiSolidLeftArrow } from "react-icons/bi";
 
-import { classNames } from "../../../utility/classNames";
+import { classNames } from "../../utility/classNames";
 
 const variant: AnimationProps["variants"] = {
   enter: (direction: number) => {
