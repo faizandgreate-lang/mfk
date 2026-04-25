@@ -50,7 +50,11 @@ export default function FaizanAIChat({
     const userMessage = msgToSend.trim();
     if (!overrideMessage) setMessage("");
 
-    setChatHistory((prev) => [...prev, { role: "user", content: userMessage }]);
+    setChatHistory((prev) => [
+      ...prev,
+      { role: "user", content: userMessage },
+      { role: "assistant", content: "" },
+    ]);
     setIsLoading(true);
 
     try {
@@ -66,31 +70,17 @@ export default function FaizanAIChat({
         }),
       });
 
-      if (!response.ok) throw new Error("Failed to connect");
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.message || "Failed to connect");
 
-      const reader = response.body?.getReader();
-      if (!reader) throw new Error("No reader available");
-
-      setChatHistory((prev) => [...prev, { role: "assistant", content: "" }]);
-
-      const decoder = new TextDecoder();
-      let done = false;
-      let accumulatedText = "";
-
-      while (!done) {
-        const { value, done: doneReading } = await reader.read();
-        done = doneReading;
-        if (value) {
-          const chunkValue = decoder.decode(value);
-          accumulatedText += chunkValue;
-
-          setChatHistory((prev) => {
-            const newHistory = [...prev];
-            newHistory[newHistory.length - 1].content = accumulatedText;
-            return newHistory;
-          });
-        }
-      }
+      setChatHistory((prev) => {
+        const newHistory = [...prev];
+        newHistory[newHistory.length - 1] = {
+          role: "assistant",
+          content: data.text,
+        };
+        return newHistory;
+      });
     } catch (error: any) {
       console.error("Chat error:", error);
       setChatHistory((prev) => [

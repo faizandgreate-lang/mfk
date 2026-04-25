@@ -26,8 +26,7 @@ export default async function handler(
   try {
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-    // Enable streaming for faster response perception
-    const result = await model.generateContentStream({
+    const result = await model.generateContent({
       contents: [
         { role: "user", parts: [{ text: SYSTEM_PROMPT }] },
         { role: "model", parts: [{ text: "Understood." }] },
@@ -39,19 +38,10 @@ export default async function handler(
       ],
     });
 
-    // Set headers for streaming
-    res.setHeader("Content-Type", "text/event-stream");
-    res.setHeader("Cache-Control", "no-cache");
-    res.setHeader("Connection", "keep-alive");
-
-    for await (const chunk of result.stream) {
-      const chunkText = chunk.text();
-      res.write(chunkText);
-    }
-
-    res.end();
+    const responseText = result.response.text();
+    res.status(200).json({ text: responseText });
   } catch (error: any) {
-    console.error("Streaming Error:", error);
-    res.status(500).end("Error generating response.");
+    console.error("AI Error:", error);
+    res.status(500).json({ message: error.message || "Error generating response" });
   }
 }
