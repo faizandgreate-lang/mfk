@@ -16,10 +16,15 @@ export default async function handler(
     return res.status(405).json({ message: "Method not allowed" });
   }
 
+  const apiKey = process.env.GOOGLE_AI_API_KEY;
+  if (!apiKey) {
+    return res.status(500).json({ message: "API Key missing on server" });
+  }
+
   const { message, history } = req.body;
 
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-flash-latest" });
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
     // Enable streaming for faster response perception
     const result = await model.generateContentStream({

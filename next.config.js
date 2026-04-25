@@ -1,3 +1,4 @@
+// Triggering fresh deployment with updated environment variables
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
