@@ -2,8 +2,8 @@ import { Dispatch, SetStateAction } from "react";
 
 import { CircleCheckIcon, TriangleAlertIcon } from "lucide-react";
 
-import CustomToast from "@/components/utility/custom-toast";
-import { classNames } from "@/utility/classNames";
+import CustomToast from "@/componen../../utility/custom-toast";
+import { classNames } from "../../utility/classNames";
 
 type ToastType = "success" | "failure" | "warning" | null;
 export type MailSentToastState = {

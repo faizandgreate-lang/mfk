@@ -1,6 +1,6 @@
 import { type ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
 
-import { type Locale } from "@/utility/translations";
+import { type Locale } from "../utility/translations";
 
 export const EDUCATION: Record<Locale, ExperienceShowcaseListItemProps[]> = {
   en: [

@@ -4,9 +4,9 @@ import { Montserrat } from "next/font/google";
 import Navbar from "@/layout/navbar";
 import Footer from "@/layout/footer";
 import FaizanAIChat from "@/components/faizan-ai-chat";
-import { classNames } from "@/utility/classNames";
+import { classNames } from "../../utility/classNames";
 import { useRouter } from "next/router";
-import { translations, Locale } from "@/utility/translations";
+import { translations, Locale } from "../../utility/translations";
 
 const montserrat = Montserrat({
   subsets: ["latin"],

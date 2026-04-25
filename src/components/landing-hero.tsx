@@ -8,7 +8,7 @@ import {
 } from "framer-motion";
 import FadeUp from "@/animation/fade-up";
 import { useRouter } from "next/router";
-import { translations, Locale } from "@/utility/translations";
+import { translations, Locale } from "../../utility/translations";
 
 export default function LandingHero() {
   const router = useRouter();

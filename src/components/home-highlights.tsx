@@ -2,7 +2,7 @@ import Link from "next/link";
 import { CheckCircle2, Trophy, Globe } from "lucide-react";
 import { FiExternalLink } from "react-icons/fi";
 import { useRouter } from "next/router";
-import { translations, Locale } from "@/utility/translations";
+import { translations, Locale } from "../../utility/translations";
 
 const HIGHLIGHTS_DATA = {
   en: {

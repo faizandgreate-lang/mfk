@@ -4,7 +4,7 @@ import { X, Send, Loader2, Bot, Copy, Check } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useRouter } from "next/router";
-import { translations, Locale } from "@/utility/translations";
+import { translations, Locale } from "../../utility/translations";
 import { useTheme } from "next-themes";
 
 interface FaizanAIChatProps {

@@ -3,8 +3,8 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { ValidationError } from "yup";
 
 import { mailValidationSchema } from "@/components/contact-form/contact-form";
-import { rateLimiterApi, getUserId } from "@/utility/rate-limiter";
-import { sendMail } from "@/utility/sendMail";
+import { rateLimiterApi, getUserId } from "../../utility/rate-limiter";
+import { sendMail } from "../../utility/sendMail";
 
 const REQUEST_PER_HOUR = 5 as const;
 const RATELIMIT_DURATION = 3600000 as const;

@@ -6,7 +6,7 @@ import { PROJECTS_CARD } from "@/data/projects";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 
 import { useRouter } from "next/router";
-import { Locale, translations } from "@/utility/translations";
+import { Locale, translations } from "../utility/translations";
 
 export default function Projects() {
   const router = useRouter();

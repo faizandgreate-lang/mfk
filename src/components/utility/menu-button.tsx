@@ -1,6 +1,6 @@
 import { SVGMotionProps, motion } from "framer-motion";
 
-import { classNames } from "@/utility/classNames";
+import { classNames } from "../../utility/classNames";
 
 const Path = (props: SVGMotionProps<SVGPathElement>) => (
   <motion.path

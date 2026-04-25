@@ -2,7 +2,7 @@ import { type ProjectCardProps } from "@/components/projects/project-card";
 import { type ProjectShowcaseListItem } from "@/components/projects/project-showcase-list";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 
-import { type Locale } from "@/utility/translations";
+import { type Locale } from "../utility/translations";
 
 export const PROJECT_SHOWCASE: Record<Locale, ProjectShowcaseListItem[]> = {
   en: [

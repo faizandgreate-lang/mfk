@@ -9,7 +9,7 @@ import { SKILLS_DATA } from "@/data/skills";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
 
 import { useRouter } from "next/router";
-import { Locale } from "@/utility/translations";
+import { Locale } from "../utility/translations";
 
 export default function Home() {
   const router = useRouter();

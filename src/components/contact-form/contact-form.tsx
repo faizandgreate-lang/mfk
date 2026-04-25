@@ -2,9 +2,9 @@ import { Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import { Loader2Icon } from "lucide-react";
 
-import CustomInput from "@/components/utility/custom-input";
-import CustomTextarea from "@/components/utility/custom-textarea";
-import { type FormiKInputFieldProps } from "@/utility/types";
+import CustomInput from "@/componen../../utility/custom-input";
+import CustomTextarea from "@/componen../../utility/custom-textarea";
+import { type FormiKInputFieldProps } from "../../utility/types";
 
 export const mailValidationSchema = Yup.object({
   email: Yup.string().email("Invalid email").required("Email required"),

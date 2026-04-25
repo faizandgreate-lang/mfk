@@ -4,12 +4,12 @@ import { usePathname } from "next/navigation";
 
 import { AnimatePresence, motion } from "framer-motion";
 
-import MenuLogo from "@/components/utility/menu-button";
-import ThemeSwitch from "@/components/utility/theme-switch";
+import MenuLogo from "@/componen../../utility/menu-button";
+import ThemeSwitch from "@/componen../../utility/theme-switch";
 import AnimatedLogo from "@/animation/animated-logo";
-import MobileMenu from "@/components/utility/mobile-menu";
+import MobileMenu from "@/componen../../utility/mobile-menu";
 import NavbarSearch from "@/components/navbar-search";
-import { classNames } from "@/utility/classNames";
+import { classNames } from "../../utility/classNames";
 
 export type NavbarRoute = {
   title: string;
